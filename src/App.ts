@@ -11,13 +11,13 @@ class App {
     this.routes();
   }
 
-  midlewares() {
+  midlewares(): void {
     this.server.use(express.json({ limit: '20mb' }));
     this.server.use(express.urlencoded({ limit: '20mb', extended: true }));
     this.server.use(cors());
   }
 
-  routes() {
+  routes(): void {
     this.server.use(routes);
   }
 }
